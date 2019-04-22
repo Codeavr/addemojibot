@@ -1,3 +1,4 @@
+import logging
 from uuid import uuid4
 from config import Config
 import emoji_translate_api
@@ -65,5 +66,7 @@ if __name__ == "__main__":
     dispatcher = updater.dispatcher
     dispatcher.add_handler(CommandHandler("start", start))
     dispatcher.add_handler(InlineQueryHandler(on_inline_text))
+    logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+                     level=logging.INFO)
     updater.start_polling()
     updater.idle()
