@@ -34,6 +34,8 @@ def emojify(text) -> str:
 def on_inline_text(bot, update):
     query = update.inline_query.query
     emojies = emojify(query)
+    if emojies is None:
+        return
     results = [
         InlineQueryResultArticle(
             id=uuid4(),
