@@ -19,22 +19,3 @@ class API(object):
     @staticmethod
     def _build_translate_text_url(api_root, api_key, text, to_lang) -> str:
         return f'{api_root}tr.json/translate?key={api_key}&text={text}&lang={to_lang}'
-
-# https://translate.yandex.net/api/v1.5/tr.json/translate
-#  ? [key=<API-ключ>]
-#  & [text=<переводимый текст>]
-#  & [lang=<направление перевода>]
-#  & [format=<формат текста>]
-#  & [options=<опции перевода>]
-#  & [callback=<имя callback-функции>]
-
-
-# {
-#     "code": 200,
-#     "lang": "en-ru",
-#     "text": [
-#         "Здравствуй, Мир!"
-#     ]
-# }
-
-#

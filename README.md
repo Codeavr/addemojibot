@@ -1,4 +1,4 @@
-# "Add Emoji Bot"
+# "Add Emoji Bot" <br> [@addemojibot](http://t.me/addemojibot)
 
 Small telegram bot that replaces words with emojies (if can) on inline query or direct message
 
