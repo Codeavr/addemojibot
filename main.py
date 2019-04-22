@@ -21,13 +21,33 @@ def all_chars_are_latin(text):
 
 def on_inline_text(update, context):
     query = context.inline_query.query
+    print('query:', query)
     update.inline_query.answer([InlineQueryResultArticle(
         id=uuid4(),
         title="Caps",
         input_message_content=query.upper())])
 
+    return
+
+    query = context.inline_query.query
+    if all_chars_are_latin(query):
+        eng_text = query
+    else:
+        eng_text = ya_api.translate_text(query)
+    emojies = emoji_api.translate_to_emojies(eng_text)
+
+    results = [
+        InlineQueryResultArticle(
+            id=uuid4(),
+            type='article',
+            title="Translated",
+            input_message_content=InputTextMessageContent(emojies))
+    ]
+    update.inline_query.answer(results)
+
 
 def start(update, context):
+    print('hi')
     update.message.reply_text('Hi!')
 
 
