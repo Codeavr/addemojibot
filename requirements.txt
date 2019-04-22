@@ -3,3 +3,4 @@ requests
 PySocks
 uuid
 BeautifulSoup4
+html5lib
