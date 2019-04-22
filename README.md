@@ -3,10 +3,6 @@
 Small telegram bot that replaces words with emojies (if can) on inline query or direct message
 
 ## Installing
-Clone this repo: git clone https://github.com/backmeupplz/memcoin
-Create .env file with environment variables listed below
-Run yarn install in the root folder
-Run yarn distribute
 
 1) Clone repo
 ```
